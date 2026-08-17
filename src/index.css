@@ -119,6 +119,11 @@ a:hover {
   padding: 8px 16px;
   border-radius: 999px;
   font-weight: 600;
+  border: none;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 1;
 }
 
 .btn:hover {
@@ -317,3 +322,43 @@ a:hover {
     gap: 32px;
   }
 }
+
+/* Print / Save as PDF */
+@media print {
+  :root {
+    --brand: #1a1a1a;
+  }
+  body {
+    background: #fff;
+  }
+  .hero {
+    padding: 0 0 16px;
+    background: #fff;
+    color: #000;
+  }
+  .container {
+    padding: 0;
+    max-width: none;
+  }
+  .btn,
+  .footer {
+    display: none !important;
+  }
+  .socials a {
+    color: #000 !important;
+  }
+  a {
+    color: #000 !important;
+    text-decoration: none;
+  }
+  .card,
+  .project,
+  .section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  h2 {
+    break-after: avoid;
+  }
+}
+

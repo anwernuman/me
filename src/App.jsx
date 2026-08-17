@@ -1,4 +1,6 @@
 import { profile, experience, education, skills, highlights } from './data.js'
+import { pdf } from '@react-pdf/renderer'
+import ResumePDF from './ResumePDF.jsx'
 
 function initials(name) {
   return name
@@ -7,6 +9,18 @@ function initials(name) {
     .slice(0, 2)
     .join('')
     .toUpperCase()
+}
+
+async function downloadCv() {
+  const blob = await pdf(<ResumePDF />).toBlob()
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = `${profile.name.replace(/\s+/g, '-')}-CV.pdf`
+  document.body.appendChild(a)
+  a.click()
+  a.remove()
+  URL.revokeObjectURL(url)
 }
 
 export default function App() {
@@ -35,11 +49,9 @@ export default function App() {
                   {s.label}
                 </a>
               ))}
-              {profile.resumeUrl && (
-                <a className="btn" href={profile.resumeUrl} target="_blank" rel="noreferrer">
-                  Download CV
-                </a>
-              )}
+              <button className="btn" type="button" onClick={downloadCv}>
+                Download PDF
+              </button>
             </div>
           </div>
         </div>

@@ -13,7 +13,7 @@ export const profile = {
   // To offer a downloadable CV: place a PDF in `public/` and set resumeUrl: '/resume.pdf'
   resumeUrl: '',
   summary:
-    'I turn complex, sensitive workforce data into trusted, scalable products that shape strategic decisions across a global organisation. Over 6+ years I have moved teams from manual, fragmented reporting to automated, governed and self-service analytics — architecting Power Platform applications, Power BI semantic models and Snowflake data pipelines end to end. I pair deep technical delivery with product ownership, stakeholder leadership and a strong governance mindset, and I am now focused on Lead / Manager roles across People Analytics, HR Technology and Data Transformation.',
+    'I turn complex, sensitive workforce data into trusted, scalable products that shape strategic decisions across a global organisation. I have moved teams from manual, fragmented reporting to automated, governed and self-service analytics — architecting Power Platform applications, Power BI semantic models and Snowflake data pipelines end to end. I pair deep technical delivery with product ownership, stakeholder leadership and a strong governance mindset, and I am now focused on Lead / Manager roles across People Analytics, HR Technology and Data Transformation.',
   socials: [
     { label: 'GitHub', url: 'https://github.com/anwernuman' },
     { label: 'LinkedIn', url: 'https://linkedin.com/in/mohammadnumananwer' },
