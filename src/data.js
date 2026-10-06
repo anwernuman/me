@@ -112,7 +112,7 @@ export const skills = [
   },
   {
     group: 'Data Engineering',
-    items: ['Snowflake', 'SQL', 'ETL / ELT', 'Data Modelling', 'Data Quality', 'Integration Pipelines'],
+    items: ['Snowflake', 'SQL', 'Python', 'ETL / ELT', 'Data Modelling', 'Data Quality', 'Integration Pipelines'],
   },
   {
     group: 'Cloud & Integration',
